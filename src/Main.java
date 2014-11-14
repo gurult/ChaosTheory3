@@ -1,9 +1,20 @@
+import gui.MainFrame;
 
-public class Main {
+import javax.swing.SwingUtilities;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+public class Main 
+{
+	public static void main(String[] args)
+	{
+		SwingUtilities.invokeLater(new Runnable()
+		{
+			public void run()
+			{	
+				// there we will begin create our program
+				new MainFrame();
+			}	 
+		 });
 	}
 
 }
