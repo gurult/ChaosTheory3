@@ -80,11 +80,9 @@ public class TreeSetingsPanel extends JPanel {
 				
 				bp[3] = new BranchParams((int)fourthSpinnerDeg.getValue(),
 						(Double)fourthSpinner.getValue());
-				
-						bpl.printInfo(bp[0]);
-						bpl.printInfo(bp[1]);
-						bpl.printInfo(bp[2]);
-						bpl.printInfo(bp[3]);
+						
+				bpl.setBranchParams(bp);
+				bpl.runAnotherPartOfProgram();
 				
 			}});
 	}
