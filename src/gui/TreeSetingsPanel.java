@@ -9,8 +9,9 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
-import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
+
+import utils.BranchParams;
 
 @SuppressWarnings("serial")
 public class TreeSetingsPanel extends JPanel {
@@ -62,8 +63,25 @@ public class TreeSetingsPanel extends JPanel {
 		createTreeButton.addActionListener(new ActionListener(){
 
 			public void actionPerformed(ActionEvent arg0) {
-				System.out.println(firstSpinner.getValue());
-				double x= (Double)firstSpinner.getValue();
+				
+				BranchParams[] bp = new BranchParams[4];
+				
+				bp[0] = new BranchParams((int)firstSpinnerDeg.getValue(),
+										(Double)firstSpinner.getValue());
+				
+				bp[1] = new BranchParams((int)secondSpinnerDeg.getValue(),
+						(Double)secondSpinner.getValue());
+				
+				bp[2] = new BranchParams((int)thirdSpinnerDeg.getValue(),
+						(Double)thirdSpinner.getValue());
+				
+				bp[3] = new BranchParams((int)fourthSpinnerDeg.getValue(),
+						(Double)fourthSpinner.getValue());
+				
+				bp[0].printInfo();
+				bp[1].printInfo();
+				bp[2].printInfo();
+				bp[3].printInfo();
 				
 			}});
 	}
