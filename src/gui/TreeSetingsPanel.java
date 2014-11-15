@@ -12,12 +12,15 @@ import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 
 import utils.BranchParams;
+import utils.BranchParamsListener;
 
 @SuppressWarnings("serial")
 public class TreeSetingsPanel extends JPanel {
 	
 	private static final String FORMAT = "0.00";
 	private static final String FORMAT1 = "000";
+	
+	private BranchParamsListener bpl;
 	
 	//Pagrindiniai label
 	
@@ -78,10 +81,10 @@ public class TreeSetingsPanel extends JPanel {
 				bp[3] = new BranchParams((int)fourthSpinnerDeg.getValue(),
 						(Double)fourthSpinner.getValue());
 				
-				bp[0].printInfo();
-				bp[1].printInfo();
-				bp[2].printInfo();
-				bp[3].printInfo();
+						bpl.printInfo(bp[0]);
+						bpl.printInfo(bp[1]);
+						bpl.printInfo(bp[2]);
+						bpl.printInfo(bp[3]);
 				
 			}});
 	}
@@ -249,5 +252,9 @@ public class TreeSetingsPanel extends JPanel {
 		secondSpinnerDeg.setEditor(new JSpinner.NumberEditor(secondSpinnerDeg, FORMAT1));
 		thirdSpinnerDeg.setEditor(new JSpinner.NumberEditor(thirdSpinnerDeg, FORMAT1));
 		fourthSpinnerDeg.setEditor(new JSpinner.NumberEditor(fourthSpinnerDeg, FORMAT1));
+	}
+	
+	public void setBpl(BranchParamsListener bpl) {
+		this.bpl = bpl;
 	}
 }

@@ -4,6 +4,9 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 
+import utils.BranchParams;
+import utils.BranchParamsListener;
+
 @SuppressWarnings("serial")
 public class MainFrame extends JFrame{
 	
@@ -31,5 +34,11 @@ public class MainFrame extends JFrame{
 		
 		treePanel = new TreeSetingsPanel();
 		add(treePanel, BorderLayout.CENTER);
+		treePanel.setBpl(new BranchParamsListener(){
+			public void printInfo(BranchParams bp) {
+				bp.printInfo();
+			}
+			
+		});
 	}
 }
