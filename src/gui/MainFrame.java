@@ -58,7 +58,7 @@ public class MainFrame extends JFrame{
 		// inicilizuojame nauja JFrame
 		
 		JFrame pantingFrame = new JFrame("Medis");
-		pantingFrame.setSize(500,500);
+		pantingFrame.setSize(550,550);
 		pantingFrame.setVisible(true);
 		pantingFrame.setLocationRelativeTo(null);
 		pantingFrame.add(treeDrawingPanel);

@@ -1,8 +1,10 @@
 package gui;
 
+import java.awt.BorderLayout;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 import utils.BranchParams;
@@ -10,11 +12,13 @@ import utils.BranchParams;
 
 @SuppressWarnings("serial")
 public class TreeDrawingPanel extends JPanel {
+	private JButton nextIterationButton = new JButton("Sekanti iteracija");
 	
 	private BranchParams[] bp;
 	
 	public TreeDrawingPanel() {
-		
+		setLayout(new BorderLayout());
+		add(nextIterationButton, BorderLayout.SOUTH);
 	}
 	
 	public void paintComponent(Graphics g) {
