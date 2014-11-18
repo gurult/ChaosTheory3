@@ -201,6 +201,7 @@ public class TreeSetingsPanel extends JPanel {
 		c.weightx = 0;
 		c.weighty = 0;
 		
+		// vejo  stiprumas
 
 		add(fourthBranchResize, c);
 		
@@ -241,10 +242,10 @@ public class TreeSetingsPanel extends JPanel {
 		fourthSpinner.setEditor(new JSpinner.NumberEditor(fourthSpinner, FORMAT));
 		
 		//-----------------------------------------
-		firstSpinnerDeg = new JSpinner(new SpinnerNumberModel(0, 0, 180, 1));
-		secondSpinnerDeg = new JSpinner(new SpinnerNumberModel(0, 0, 180, 1));
-		thirdSpinnerDeg = new JSpinner(new SpinnerNumberModel(0, 0, 180, 1));
-		fourthSpinnerDeg = new JSpinner(new SpinnerNumberModel(0, 0, 180, 1));
+		firstSpinnerDeg = new JSpinner(new SpinnerNumberModel(0, 0, 360, 1));
+		secondSpinnerDeg = new JSpinner(new SpinnerNumberModel(0, 0, 360, 1));
+		thirdSpinnerDeg = new JSpinner(new SpinnerNumberModel(0, 0, 360, 1));
+		fourthSpinnerDeg = new JSpinner(new SpinnerNumberModel(0, 0, 360, 1));
 		
 		firstSpinnerDeg.setEditor(new JSpinner.NumberEditor(firstSpinnerDeg, FORMAT1));
 		secondSpinnerDeg.setEditor(new JSpinner.NumberEditor(secondSpinnerDeg, FORMAT1));

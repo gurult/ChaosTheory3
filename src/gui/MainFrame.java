@@ -44,7 +44,6 @@ public class MainFrame extends JFrame{
 			
 			public void runAnotherPartOfProgram() {
 				treeDrawingPanel.setBps(this.getBp());
-				this.print();
 				initNewFrame();
 			}
 		});
@@ -63,7 +62,7 @@ public class MainFrame extends JFrame{
 		pantingFrame.setLocationRelativeTo(null);
 		pantingFrame.add(treeDrawingPanel);
 		pantingFrame.setVisible(true);
-		pantingFrame.setDefaultCloseOperation(pantingFrame.DISPOSE_ON_CLOSE);
+		pantingFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 	} 
 
