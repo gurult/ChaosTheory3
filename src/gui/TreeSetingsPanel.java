@@ -201,7 +201,6 @@ public class TreeSetingsPanel extends JPanel {
 		c.weightx = 0;
 		c.weighty = 0;
 		
-		// vejo  stiprumas
 
 		add(fourthBranchResize, c);
 		
