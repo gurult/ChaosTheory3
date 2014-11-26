@@ -14,4 +14,8 @@ public class BranchParams {
 		System.out.println("Posukio kampas " + angle);
 		System.out.println("Maþinimo kofecienatas " + scale);
 	}
+	
+	public BranchParams clone() {
+		return new BranchParams(this.angle, this.scale);
+	}
 }
